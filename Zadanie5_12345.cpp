@@ -22,11 +22,15 @@ int main()
 	L2 = abs(x3 - x2);
 	cout << "AC = " << L1 << endl << "BC = " << L2 << endl << "AC + BC = " << L1+L2 << endl;
 
-	cout << "type in A, B, C" << endl;//3
+	cout << "type in A, B, C (C must be between A and B)" << endl;//3
 	cin >> x1 >> x2 >> x3;
-	L1 = abs(x1 - x3);
-	L2 = abs(x3 - x2);
-	cout << "AC * BC = " << L1 * L2 << endl;
+	if ((x3 > x2 && x3 > x1) || (x3 < x2 && x3 < x1)) cout << "input is incorrect, C must be inbetween A and B" << endl << endl;
+	else 
+	{
+		L1 = abs(x1 - x3);
+		L2 = abs(x3 - x2);
+		cout << "AC * BC = " << L1 * L2 << endl << endl;
+	}
 
 	cout << "type in (x1, y1) and (x2, y2)" << endl;//4
 	cin >> x1 >> y1 >> x2 >> y2;
